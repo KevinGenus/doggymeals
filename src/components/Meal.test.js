@@ -25,7 +25,7 @@ describe("Meal", () => {
         .simulate("change", { target: { value: dogName } });
     });
 
-    it("updates the doggy in `state`", () => {
+    it("updates the dog in `state`", () => {
       expect(meal.state().dog).toEqual(dogName);
     });
   });
