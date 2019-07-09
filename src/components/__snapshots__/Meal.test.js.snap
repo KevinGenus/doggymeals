@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Meal renders properly 1`] = `
-<div>
+<div
+  className=".meal"
+>
   <Form
     inline={false}
   >

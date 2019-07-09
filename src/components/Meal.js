@@ -17,7 +17,7 @@ class Meal extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="meal">
         <Form>
           <FormGroup>
             <FormLabel>Dog</FormLabel>

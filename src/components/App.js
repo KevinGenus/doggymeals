@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>Doggy Meals</div>
+        <h1>Doggy Meals</h1>
         <div className="meal-list">
           {this.state.meals.map(meal => {
             return (
