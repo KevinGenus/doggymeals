@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Doggy Meals
 
-## Available Scripts
+## Unit / Coverage testing using Jest and Enzyme
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Required Installations
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Node version 8 or higher
+  -- `node -v` should return something like `v12.4.0`
+  -- Node 10.x is already installed on pair stations
+- Create-react-app
+  -- `create-react-app --version` should return something like 3.0.1.
+  -- install globally: `npm install -g create-react-app`
+- A code editor such as vscode, sublime, vim, emacs, etc...
 
-### `npm test`
+### Optional Installations
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###### VSCode Plugins
 
-### `npm run build`
+- Jest (IDE based feedback for tests)
+- Jest Snippets
+- Jest Runner (right-click on the test you which you to run)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###### Sublime Plugins
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Sublime Jest (snippets)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+### Initial Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone this repo.
+1. Open a terminal and run `yarn test`.
+1. Open the project's `<rootDir>` in your editor.
+1. Run `yarn start` to start the server on `http://localhost:3000`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Jest, Enzyme and Snapshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Snapshot testing is a way to assert the result of a given test by generating a JSON representation of its output. This was the preferred method of component testing up to and include Jest v23; however, as of Jest v24, this is no longer the default behavior, as the snapshot captured more than the desired components children. In `package.json` exists `enzyme-to-json` as an npm package, it is called, in the same file, at `"jest": { "snapshotSerializers": [ "enzyme-to-json/serializer" ]`. This provides the same functionality as previous versions of Jest (<=23), but only captures the children.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Development Workflow with Jest
 
-## Learn More
+1. For the purposes of this project, please consider the following layout: 1/3 of your screen has an active session of `yarn test`, 1/3 `src/app.js`, and `1/3 src/app.test.js`.
+1. This follows the same outside-in test-first methodology. When writing a new feature, first add or modify a test, then chaneg the next-lowest level of the architecture that implements the functionality you want. Repeat until the feature is complete.
+   Note: If you are required to update snapshots for a component, select the terminal running your tests and `press the letter 'U'` to update the snapshot.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Addon
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Dogs need something to drink their meal...
+- Change the title to Doggy stuff and add a Toy feature...
