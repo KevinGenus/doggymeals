@@ -2,8 +2,6 @@
 
 ## Unit / Coverage testing using Jest and Enzyme
 
----
-
 ## Requirements
 
 ### Required Installations
@@ -45,9 +43,12 @@ Snapshot testing is a way to assert the result of a given test by generating a J
 
 1. For the purposes of this project, please consider the following layout: 1/3 of your screen has an active session of `yarn test`, 1/3 `src/app.js`, and `1/3 src/app.test.js`.
 1. This follows the same outside-in test-first methodology. When writing a new feature, first add or modify a test, then chaneg the next-lowest level of the architecture that implements the functionality you want. Repeat until the feature is complete.
-   Note: If you are required to update snapshots for a component, select the terminal running your tests and `press the letter 'U'` to update the snapshot.
 
-## Addon
+   **Note: If you are required to update snapshots for a component, select the terminal running your tests and `press the letter 'U'` to update the snapshot.**
+
+#### Addons
+
+Get a taste... all the examples are in the existing code, it's pretty simple.
 
 - Dogs need something to drink their meal...
 - Change the title to Doggy stuff and add a Toy feature...
