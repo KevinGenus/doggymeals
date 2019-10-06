@@ -8,6 +8,7 @@
     "test": "jest",
     "test:coverage": "node scripts/test.js --coverage --watchAll=false"
   },
+  "main": "scripts/start.js",
   "dependencies": {
     "@babel/core": "7.4.3",
     "@svgr/webpack": "4.1.0",
