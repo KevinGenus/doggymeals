@@ -2,7 +2,7 @@
 
 exports[`Meal renders properly 1`] = `
 <div
-  className=".meal"
+  className="meal"
 >
   <Form
     inline={false}
